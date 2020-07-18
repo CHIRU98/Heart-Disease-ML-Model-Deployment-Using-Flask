@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    input[type=text] {
+    width:20%;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left:35px;
+    border:1px solid red;
+    border-radius:4px;
+    align:center
+    }
+    input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align:center;
+    background-color:blue;
+    box-shadow:0 0 10px black;
+    margin-top:20px;
+    }
+    .container {
+    border-radius: 5px;
+    background:linear-gradient(45deg,yellow,red);
+    padding: 20px;
+    }
+
+    body{
+    background:linear-gradient(45deg,yellow,red);
+    }
+
+
+    </style>
+</head>
+<body >
+       <h1 align="center" style="color:white" > Heart Disease Prediction</h1>
+   <div class="container" align="center">
+       <form action="{{url_for('predict')}}" method="post" >
+           <input class="form-input" type="text" name="Age" placeholder="Enter Age"><br>
+           <input class="form-input" type="text" name="sex" placeholder="Enter sex"><br>
+           <input class="form-input" type="text" name="cp" placeholder="Enter cp"><br>
+           <input class="form-input" type="text" name="trestbps" placeholder="Enter trestbps"><br>
+           <input class="form-input" type="text" name="chol" placeholder="Enter chol"><br>
+           <input class="form-input" type="text" name="fbs" placeholder="Enter fbs"><br>
+           <input class="form-input" type="text" name="restecg" placeholder="Enter restecg"><br>
+           <input class="form-input" type="text" name="thalach" placeholder="Enter thalach"><br>
+           <input class="form-input" type="text" name="exang" placeholder="Enter exang"><br>
+           <input class="form-input" type="text" name="oldpeak" placeholder="Enter toldpeak"><br>
+           <input class="form-input" type="text" name="slope" placeholder="Enter slope"><br>
+           <input class="form-input" type="text" name="ca" placeholder="Enter ca"><br>
+           <input class="form-input" type="text" name="thal" placeholder="Enter yhal"><br>
+
+           <input type="submit" class="my-cta-button" value="Predict">
+       </form>
+       <br>
+       <br>
+       {{prediction_text}}
+   </div>
+
+
+</body>
+</html>
